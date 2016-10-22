@@ -26,6 +26,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :liked_photos,
+             :through => :votes,
+             :source => :photo
+
   # Validations
 
   validates :username, :presence => true
