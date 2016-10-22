@@ -5,6 +5,8 @@ class FriendRequest < ApplicationRecord
 
   # Validations
 
+  validates :accepted, :inclusion => { :in => [ 'pending', ' accepted', ' declined' ]  }
+
   validates :recipient_id, :uniqueness => { :scope => [:sender_id], :message => "already requested" }
 
   validates :recipient_id, :presence => true
