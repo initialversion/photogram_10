@@ -1,6 +1,9 @@
 class Vote < ApplicationRecord
   # Direct associations
 
+  belongs_to :photo,
+             :counter_cache => :likes_count
+
   belongs_to :fan,
              :class_name => "User"
 
