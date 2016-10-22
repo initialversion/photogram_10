@@ -1,6 +1,8 @@
 class Photo < ApplicationRecord
   # Direct associations
 
+  has_many   :comments
+
   has_many   :likes,
              :class_name => "Vote",
              :dependent => :destroy
