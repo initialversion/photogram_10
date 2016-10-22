@@ -24,7 +24,7 @@
           Fan
         </label>
 
-        <input type="text" id="fan_id" name="fan_id" placeholder="Fan" class="form-control" value="<%= @vote.fan_id %>">
+        <%= select_tag(:fan_id, options_from_collection_for_select(User.all, :id, :email, @vote.fan_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for photo_id -->
