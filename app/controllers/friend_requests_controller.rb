@@ -10,7 +10,7 @@ class FriendRequestsController < ApplicationController
   end
 
   def index
-    @friend_requests = FriendRequest.all
+    @friend_requests = current_user.sent_friend_requests
   end
 
   def show
