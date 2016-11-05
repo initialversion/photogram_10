@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   end
 
   def index
-    @comments = current_user.comments
+    @comments = current_user.comments.page(params[:page])
   end
 
   def show

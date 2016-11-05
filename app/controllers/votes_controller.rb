@@ -10,7 +10,7 @@ class VotesController < ApplicationController
   end
 
   def index
-    @votes = current_user.votes
+    @votes = current_user.votes.page(params[:page])
   end
 
   def show

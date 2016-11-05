@@ -9,6 +9,14 @@ GIT
       responders
 
 GIT
+  remote: https://github.com/murugan-r/seed_dump.git
+  revision: 08707d80fa0d9776b2118fbdabd66f9548181e0a
+  specs:
+    seed_dump (3.2.4)
+      activerecord (>= 4)
+      activesupport (>= 4)
+
+GIT
   remote: https://github.com/raghubetina/starter_generators.git
   revision: bb818e7b2b531da20a6c3b05bec9ef807ca82af2
   specs:
@@ -63,6 +71,8 @@ GEM
       activemodel (= 5.0.0.1)
       activesupport (= 5.0.0.1)
       arel (~> 7.0)
+    activerecord-import (0.16.1)
+      activerecord (>= 3.2)
     activesupport (5.0.0.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
@@ -73,6 +83,9 @@ GEM
     arel (7.1.4)
     aws_cf_signer (0.1.3)
     bcrypt (3.1.11)
+    bootstrap4-kaminari-views (1.0.0)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     bourbon (4.2.7)
       sass (~> 3.4)
       thor (~> 0.19)
@@ -84,7 +97,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
-    cloudinary (1.2.3)
+    cloudinary (1.2.4)
       aws_cf_signer
       rest-client
     coffee-rails (4.2.1)
@@ -102,7 +115,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20161021)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
     dotenv-rails (2.1.1)
@@ -200,7 +213,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.3)
-    rb-fsevent (0.9.7)
+    rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     responders (2.3.0)
@@ -209,7 +222,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rollbar (2.13.3)
+    rollbar (2.13.1)
       multi_json
     sass (3.4.22)
     sass-rails (5.0.6)
@@ -229,12 +242,9 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    turbolinks (5.0.1)
-      turbolinks-source (~> 5)
-    turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.2)
+    uglifier (3.0.3)
       execjs (>= 0.3.0, < 3)
     underscore-rails (1.8.3)
     unf (0.1.4)
@@ -242,7 +252,7 @@ GEM
     unf_ext (0.0.7.2)
     warden (1.2.6)
       rack (>= 1.0)
-    web-console (3.3.1)
+    web-console (3.4.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       debug_inspector
@@ -256,6 +266,8 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 1.0.0.pre4)
+  activerecord-import
+  bootstrap4-kaminari-views
   byebug
   carrierwave
   cloudinary
@@ -267,6 +279,7 @@ DEPENDENCIES
   inherited_resources!
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
@@ -274,9 +287,9 @@ DEPENDENCIES
   rails_12factor
   rollbar
   sass-rails (~> 5.0)
+  seed_dump!
   sqlite3
   starter_generators!
-  turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
   underscore-rails
