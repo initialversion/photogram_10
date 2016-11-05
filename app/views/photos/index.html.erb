@@ -28,7 +28,7 @@
       <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.caption %></td>
-        <td><img src='<%= photo.image %>' class='img-responsive'></td>
+        <td><img src='//<%= photo.image %>' class='img-responsive'></td>
         <td><%= photo.shot_location %></td>
         <td><%= photo.owner.email %></td>
         <td>
@@ -42,10 +42,11 @@
       </tr>
       <% end %>
     </table>
+    <%= paginate @photos, theme: 'twitter-bootstrap-4' %>
   </div>
 </div>
 
-<script src="//maps.google.com/maps/api/js?v=3.23"></script>
+<script src="//maps.google.com/maps/api/js?v=3.24&key=AIzaSyCOTPWiuvyyo6sKoIBzKA4-1ol-vTOIOlM"></script>
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script>
   handler = Gmaps.build('Google');

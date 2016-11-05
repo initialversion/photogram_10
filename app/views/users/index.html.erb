@@ -23,7 +23,7 @@
         <td><%= user.email %></td>
         <td><%= user.password %></td>
         <td><%= user.username %></td>
-        <td><img src='<%= user.avatar %>' class='img-responsive'></td>
+        <td><img src='//<%= user.avatar %>' class='img-responsive'></td>
         <td><%= user.age %></td>
         <td><%= user.birthday %></td>
         <td>
@@ -32,5 +32,6 @@
       </tr>
       <% end %>
     </table>
+    <%= paginate @users, theme: 'twitter-bootstrap-4' %>
   </div>
 </div>

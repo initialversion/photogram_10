@@ -10,7 +10,7 @@ class FriendRequestsController < ApplicationController
   end
 
   def index
-    @friend_requests = current_user.sent_friend_requests
+    @friend_requests = current_user.sent_friend_requests.page(params[:page])
   end
 
   def show

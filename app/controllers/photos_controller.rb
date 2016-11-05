@@ -10,7 +10,7 @@ class PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all
+    @photos = Photo.page(params[:page])
     @location_hash = Gmaps4rails.build_markers(@photos.where.not(:shot_location_latitude => nil)) do |photo, marker|
       marker.lat photo.shot_location_latitude
       marker.lng photo.shot_location_longitude
@@ -19,6 +19,8 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @vote = Vote.new
     @photo = Photo.find(params[:id])
   end
 
